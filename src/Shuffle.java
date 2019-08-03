@@ -11,42 +11,39 @@ public class Shuffle {
 
 	}   
 	
-
 	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		
 		Shuffle sh = new Shuffle();
 		
 		String a[]= new String[] {"A","2","3","4","5","6","7","8","9","10","K","Q","J"};
-		String b[]= new String[] {"¢»","¢¾","¢¿","¡ß"};
+		String b[]= new String[] {"â™¤","â™¥","â™§","â—†"};
 		
-		                        // ¼ıÀÚ¼ººĞ, ¹«´Ì ¼ººĞ 
+		                        // ìˆ«ìì„±ë¶„, ë¬´ëŠ¬ ì„±ë¶„ 
 		int k, r;
 		Random ra = new Random();
 		
-		int c[] = new int[52];      //¹è¿­¾ÈÀÇ index¸¦ Á¤ÇÒ index ´ã´Â ¹è¿­ 
-		String d[] = new String[52]; //Á¤¸®ÇÏ±â À§ÇØ ±ò¾Æ³õÀ» ¼ıÀÚ ¹è¿­
-		String e[] = new String[52]; //Á¤¸®ÇÏ±â À§ÇØ ±ò¾Æ³õÀ» ¹«´Ì ¹è¿­
+		int c[] = new int[52];      //ë°°ì—´ì•ˆì˜ indexë¥¼ ì •í•  index ë‹´ëŠ” ë°°ì—´ 
+		String d[] = new String[52]; //ì •ë¦¬í•˜ê¸° ìœ„í•´ ê¹”ì•„ë†“ì„ ìˆ«ì ë°°ì—´
+		String e[] = new String[52]; //ì •ë¦¬í•˜ê¸° ìœ„í•´ ê¹”ì•„ë†“ì„ ë¬´ëŠ¬ ë°°ì—´
 		
 			
-		
 		for(int i=0;i<c.length;i++) {    
-			c[i] = i+1;		// ¾ê¼³Á¤¿¡ µû¶ó ¹Ø¿¡ +1, -1ÀÌ ´Ù¹Ù²ğ¼öÀÖÀ½ 
-			System.out.print(c[i]+" ");  //¼¯±â Àü index ¼ø¼­´ë·Î ³ª¿­ÇÏ±â
+			c[i] = i+1;		// ì–˜ì„¤ì •ì— ë”°ë¼ ë°‘ì— +1, -1ì´ ë‹¤ë°”ë€”ìˆ˜ìˆìŒ 
+			System.out.print(c[i]+" ");  //ì„ê¸° ì „ index ìˆœì„œëŒ€ë¡œ ë‚˜ì—´í•˜ê¸°
 			
-			if((i+1) % 13 == 0) //13°³¾¿  ÁÙ¹Ù²Ş
+			if((i+1) % 13 == 0) //13ê°œì”©  ì¤„ë°”ê¿ˆ
 			{
 				System.out.println("");
 			}
 		}
-		
-		
+				
 		sh.sleep(2000);
 		
 		System.out.print("\n\n");
-		for(int j=0;j<c.length;j++) { //Ä«µåÀÇ ¼ıÀÚ¼ººĞµéÀ» ÇÑÁÙ¾¿ ³ª¿­	
+		for(int j=0;j<c.length;j++) { //ì¹´ë“œì˜ ìˆ«ìì„±ë¶„ë“¤ì„ í•œì¤„ì”© ë‚˜ì—´	
 			
-			k = j % 13;	// a[]ÀÇ index¿¡ ³ÖÀ»      0ºÎÅÍ 12±îÁöÀÇ °ªÀ» ¾ò±â À§ÇÔ 			
+			k = j % 13;	// a[]ì˜ indexì— ë„£ì„      0ë¶€í„° 12ê¹Œì§€ì˜ ê°’ì„ ì–»ê¸° ìœ„í•¨ 			
 			d[j] =a[k]; 
 			
 			System.out.print(d[j]+" ");
@@ -63,7 +60,7 @@ public class Shuffle {
 		System.out.print("\n\n");
 		for(int j=0;j<c.length;j++) { 
 			
-			k = j/13;			// b[]ÀÇ index¿¡ ³ÖÀ»      0ºÎÅÍ 3±îÁöÀÇ °ªÀ» ¾ò±â À§ÇÔ 	
+			k = j/13;			// b[]ì˜ indexì— ë„£ì„      0ë¶€í„° 3ê¹Œì§€ì˜ ê°’ì„ ì–»ê¸° ìœ„í•¨ 	
 			e[j] =b[k];
 			
 			System.out.print(e[j]+" ");
@@ -75,7 +72,7 @@ public class Shuffle {
 		}
 		
 		
-		for(int i=0;i<=100000;i++) { //lottoÀÇ ¾Ë°í¸®ÁòÀ¸·Î ¼¯À½ 
+		for(int i=0;i<=100000;i++) { //lottoì„ê¸° ì•Œê³ ë¦¬ì¦˜
 			
 			r = ra.nextInt(52);
 		    int temp;
@@ -86,13 +83,13 @@ public class Shuffle {
 		}
 			
 		sh.sleep(2000);
-		System.out.print("\n\n¼¯´ÂÁß.......");
+		System.out.print("\n\nì„ëŠ”ì¤‘.......");
 		sh.sleep(4000);
 		System.out.print("\n\n\n");
 		for(int j=0;j<c.length;j++) {
 			
-			System.out.print(d[c[j]-1]+" "+e[c[j]-1]+" ");  //c[]°ªÀÌ 1ºÎÅÍ µé¾î°¬±â¶§¹®¿¡ 
-			                                                // d,e[]ÀÇ index·Î µé¾î°¡±â À§ÇØ¼­-1ÇÊ¿ä
+			System.out.print(d[c[j]-1]+" "+e[c[j]-1]+" ");  //c[]ê°’ì´ 1ë¶€í„° ë“¤ì–´ê°”ê¸°ë•Œë¬¸ì— 
+			                                                // d,e[]ì˜ indexë¡œ ë“¤ì–´ê°€ê¸° ìœ„í•´ì„œ-1í•„ìš”
 					
 			if((j+1) % 13 ==0)
 			{
@@ -100,25 +97,22 @@ public class Shuffle {
 			}
 			
 		}
-		
-		
+			
 		sh.sleep(2000);	
-		///ÀüÃ¼ º¸¿©ÁÖ°í ´Ù°¡·Á¹ö¸®´Â°Å¾ß ±×¸®°í °í¸£¶ó ÇÏ°í °¡°¢°¢¿¡ ¸Â´Â Å¸·Î ¿¬°á// ¹æ±İ º» Ä«µå ¸ÂÃß±â °ÔÀÓ (¸¶¼úÀÌ¿ë)
+		///ì „ì²´ ë³´ì—¬ì£¼ê³  ë‹¤ê°€ë ¤ë²„ë¦¬ëŠ”ê±°ì•¼ ê·¸ë¦¬ê³  ê³ ë¥´ë¼ í•˜ê³  ê°€ê°ê°ì— ë§ëŠ” íƒ€ë¡œ ì—°ê²°// ë°©ê¸ˆ ë³¸ ì¹´ë“œ ë§ì¶”ê¸° ê²Œì„ (ë§ˆìˆ ì´ìš©)
 	System.out.print("\n\n");
-	System.out.print("¸î¹øÂ° Ä«µå¸¦ °í¸£½Ã°Ú¾î¿ä?");
+	System.out.print("ëª‡ë²ˆì§¸ ì¹´ë“œë¥¼ ê³ ë¥´ì‹œê² ì–´ìš”?");
 	
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	String str = br.readLine();
 	int n = Integer.parseInt(str);
 	
 	
-	//System.out.print(d[c[n]-1]+e[c[n]-1]);   //»ç¶÷ÀÇ ´ë´äÀº index°¡ ¾Æ´Ñ ¸î¹ø¤ŠÀÎÁö¸¸ º¸¹Ç·Î
+	//System.out.print(d[c[n]-1]+e[c[n]-1]);   //ì‚¬ëŒì˜ ëŒ€ë‹µì€ indexê°€ ì•„ë‹Œ ëª‡ë²ˆÂŠì¸ì§€ë§Œ ë³´ë¯€ë¡œ
 	System.out.print(d[c[n-1]-1]+e[c[n-1]-1]);
 	
-		
-			
-	}
-		
+				
+	}		
 	
 			
 }
